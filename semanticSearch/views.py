@@ -13,17 +13,17 @@ def home(request):
     return render(request, 'semanticSearch/home.html', {})
 
 def search_booking(request):
-    result = make_query("/static/booking_rdf.owl", request)
+    result = make_query("/home/semantic/semantic.pythonanywhere.com/booking_rdf.owl", request)
     # return HttpResponse(booking_query_text(request))
     return render(request, 'semanticSearch/search_booking.html', {"result": result})
 
 def search_menu_item(request):
-    result = make_query("/static/booking_rdf.owl", request)
+    result = make_query("/home/semantic/semantic.pythonanywhere.com/booking_rdf.owl", request)
     # return HttpResponse(menu_query_text(request))
     return render(request, 'semanticSearch/search_menu_item.html', {"result": result})
 
 def search_employee(request):
-    result = make_query("/static/booking_rdf.owl", request)
+    result = make_query("/home/semantic/semantic.pythonanywhere.com/booking_rdf.owl", request)
     # return HttpResponse(employee_query_text(request))
     return render(request, 'semanticSearch/search_employee.html', {"result": result})
 
