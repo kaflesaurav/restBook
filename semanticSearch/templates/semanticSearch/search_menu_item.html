@@ -1,0 +1,136 @@
+{% extends 'semanticSearch/base.html' %}
+
+{% block content %}
+<!-- Row with jumbotron component -->
+<div class="row">
+    <div class="col">
+    <div class="jumbotron p-3">
+        <h3 class="text-center">Search Menu Items.....</h3>
+        <hr>
+        <p class="text-center text-secondary">
+        All fields are optional and needs-based.
+        </p>
+    </div>
+    </div>
+</div>
+<!-- End of row with jumbotron component -->
+<form method='post'>
+  {% csrf_token %}
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <div class="btn-group btn-group-toggle p-3" data-toggle="buttons">
+          <label class="btn btn-light active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked value='-1'> Search All
+          </label>
+          <label class="btn btn-light">
+            <input type="radio" name="options" id="option2" autocomplete="off" value='Starters'> Search Starters
+          </label>
+          <label class="btn btn-light">
+            <input type="radio" name="options" id="option3" autocomplete="off" value='Mains'> Search Mains
+          </label>
+          <label class="btn btn-light">
+            <input type="radio" name="options" id="option4" autocomplete="off" value='Desserts'> Search Desserts
+          </label>
+          <label class="btn btn-light">
+            <input type="radio" name="options" id="option5" autocomplete="off" value='Sides'> Search Sides
+          </label>
+          <label class="btn btn-light">
+            <input type="radio" name="options" id="option6" autocomplete="off" value='Salad'> Search Salads
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputItemName">Item Name</label>
+      <input type="text" class="form-control" id="inputItemName" placeholder="Enter Name" name="item_name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputIngredient">Ingredient</label>
+      <input type="text" class="form-control" id="inputIngredient" placeholder="Enter Ingredient" name="ingredient">
+    </div>
+  </div>
+ 
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputDietaryRequirement">Dietary Requirement</label>
+      <select id="inputDietaryRequirement" class="form-control" name="diet_req">
+        <option selected value=''>Choose...</option>
+        <option value='gluten'>Gluten-Free</option>
+        <option value='vegetarian'>Vegetarian</option>
+        <option value='vegan'>Vegan</option>
+        <option value='dairy'>Dairy-free</option>
+        <option value='spicy'>Non-Spicy</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputSeats">Spicy?</label>
+      <select id="inputSeats" class="form-control" name="spicy">
+        <option selected value=''>Choose...</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-4">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Order by</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" name='orderby'>
+            <option selected value=''>Choose...</option>
+            <option value="name">Name</option>
+            <option value="cat_name"> Menu Category</option>
+            <option value="spiciness">Spiciness</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="ASCDESC" id="exampleRadios1" value="ASC" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Ascending Order
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="ASCDESC" id="exampleRadios2" value="DESC">
+            <label class="form-check-label" for="exampleRadios2">
+              Descending Order
+            </label>
+          </div>    
+      </div>
+      <div class="col col-md-6">
+        <button type="submit" class="btn btn-primary btn-lg btn-block p-8">Search</button>
+      </div>
+    </div>
+  </div>    
+
+<!-- {{result}}   -->
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Ingredients</th>
+      <th scope="col">Category</th>
+      <th scope="col">Satisfies Dietary Requirement</th>
+      <th scope="col">Spiciness</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in result %}
+      <tr>
+        {% for item in row %}
+          <td>{{item}}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

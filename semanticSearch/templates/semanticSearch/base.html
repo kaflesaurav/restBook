@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Semantic Booking Management System</title>
+</head>
+
+<body>
+  <!-- Navbar Component -->
+  <nav class="navbar navbar-light flex-column sticky-top navbar-expand-md" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'images/restbook_logo.png' %}" alt="restBook Logo" height=50>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav nav-tabs">
+        <li class="nav-item mx-5">
+          <a class="nav-link" href="/searchbooking/">Search Booking</a>
+        </li>
+        <li class="nav-item mx-5">
+          <a class="nav-link" href="/searchmenuitem/">Search Menu Item</a>
+        </li>
+        <li class="nav-item mx-5">
+          <a class="nav-link" href="/searchemployee/">Search Employee</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End of navbar component -->
+
+  <!-- Start of container -->
+  <div class="container">
+    <!-- Row with collapsible content -->
+    <div class="row">
+      <div class="col text-center">
+        <a class = "text-info" textaria-expanded="false" aria-controls="seedSpecial" data-toggle="collapse" href="#seedSpecial">
+          Confused?
+        </a>
+        <p class="collapse font-italic" id="seedSpecial">Use Menu to go into different User Interfaces to explore this Semantic Web App!
+        </p>
+      </div>
+    </div>
+    <!-- End of row with collapsible content -->
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Row with nav component -->
+    <div class="row">
+      <div class="col">
+        <nav class="nav justify-content-center">
+          <a class="nav-link" href="#">© 2019 restBook™ All Rights Reserved</a>
+        </nav>
+      </div>
+    </div>
+    <!-- End of row with nav component -->
+  </div>
+  <!-- End of container -->
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  <!--  jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+  <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+  <!-- Include jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- Include Date Range Picker -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+  <script>
+      $(document).ready(function(){
+          var date_input=$('input[name="date"]'); //our date input has the name "date"
+          var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+          date_input.datepicker({
+              format: 'mm/dd/yyyy',
+              container: container,
+              todayHighlight: true,
+              autoclose: true,
+          })
+      })
+  </script>
+  
+</body>
+
+</html>

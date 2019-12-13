@@ -1,0 +1,94 @@
+{% extends 'semanticSearch/base.html' %}
+
+{% block content %}
+<!-- Row with jumbotron component -->
+<div class="row">
+    <div class="col">
+    <div class="jumbotron p-3">
+        <h3 class="text-center">Search Employees.....</h3>
+        <hr>
+        <p class="text-center text-secondary">
+        All fields are optional and needs-based.
+        </p>
+    </div>
+    </div>
+</div>
+<!-- End of row with jumbotron component -->
+<form method="post">
+  {% csrf_token %}
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmployeeID4">Employee ID</label>
+      <input type="integer" class="form-control" id="inputEmployeeID4" placeholder="Enter ID" name='employee_id'>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmployeeName4">Employee Name</label>
+      <input type="text" class="form-control" id="inputEmployeeName4" placeholder="Enter Name" name='employee_name'>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputShift">Shift</label>
+      <select id="inputShift" class="form-control" name= 'shift'>
+          <option selected value = ''>Choose...</option>
+          <option value='mon'>Monday</option>
+          <option value='tue'>Tuesday</option>
+          <option value='wed'>Wednesday</option>
+          <option value='thu'>Thursday</option>
+          <option value='fri'>Friday</option>
+          <option value='sat'>Saturday</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputWorkArea">Work Area</label>
+      <select id="inputWorkArea" class="form-control" name='work_area'>
+        <option selected value=''>Choose...</option>
+        <option value='kitchen'>Kitchen</option>
+        <option value='wait'>Waiting</option>
+      </select>
+    </div>
+  </div>
+
+  <input type="hidden" name="current_url" value="{{ request.path }}" />
+  <input type="hidden" name="length" value="4" />
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-4">
+        <div class="input-group mb-3">
+          
+        </div>
+      </div>
+      <div class="col col-md-4">
+          <button type="submit" class="btn btn-primary btn-lg btn-block p-8">Search</button>
+      </div>
+      <div class="col col-md-6">
+        
+      </div>
+    </div>
+  </div>    
+
+</form>
+
+<!-- {{result}} -->
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Shift</th>
+        <th scope="col">Work-Area</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in result %}
+        <tr>
+          {% for item in row %}
+            <td>{{item}}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

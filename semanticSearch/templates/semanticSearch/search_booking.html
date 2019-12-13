@@ -1,0 +1,115 @@
+{% extends 'semanticSearch/base.html' %}
+
+{% block content %}
+<!-- Row with jumbotron component -->
+<div class="row">
+    <div class="col">
+    <div class="jumbotron p-3">
+        <h3 class="text-center">Search Bookings.....</h3>
+        <hr>
+        <p class="text-center text-secondary">
+        All fields are optional and needs-based.
+        </p>
+    </div>
+    </div>
+</div>
+<!-- End of row with jumbotron component -->
+<form method="post">
+  {% csrf_token %}
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputBookingID4">Booking ID</label>
+      <input type="integer" class="form-control" id="inputBookingID4" placeholder="Enter ID" name="booking_id">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputBookingName4">Name in Booking</label>
+      <input type="text" class="form-control" id="inputBookingName4" placeholder="Enter Name" name="booking_name">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputDietaryRequirement">Dietary Requirement</label>
+      <select id="inputDietaryRequirement" class="form-control" name="diet_req">
+        <option selected value = ''>Choose...</option>
+        <option value = 'gluten'>Gluten-Free</option>
+        <option value = 'vegetarian'>Vegetarian</option>
+        <option value = 'vegan'>Vegan</option>
+        <option value = 'dairy'>Dairy-free</option>
+        <option value = 'spicy'>Non-spicy</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputSeats">No. of Seats</label>
+      <select id="inputSeats" class="form-control" name="seats">
+        <option selected value = '-1'>Choose...</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+      </select>
+    </div>
+  </div>
+  
+  <input type="hidden" name="current_url" value="{{ request.path }}" />
+  <input type="hidden" name="length" value="7" />
+
+
+
+  
+  <div class="container">
+      <div class="row">
+        <div class="col col-md-4">
+          <div class="form-group"> <!-- Date input -->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Date</label>
+              </div>
+              <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck" name="order_by">
+              <label class="form-check-label" for="gridCheck">
+                Show latest first
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col col-md-6">
+          <button type="submit" class="btn btn-primary btn-lg btn-block p-8">Search</button>
+        </div>
+      </div>
+  </div>    
+</form>
+
+
+<!-- {{result}} -->
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Time</th>
+      <th scope="col">Seats</th>
+      <th scope="col">Dietary Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in result %}
+      <tr>
+        {% for item in row %}
+          <td>{{item}}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
