@@ -1,0 +1,2141 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.restbook.com/"
+     xml:base="http://www.restbook.com/"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.restbook.com/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.restbook.com/">
+        <dc:description xml:lang="en">An ontology of an Italian Restaurant&apos;s Menu Items and Bookings Management.
+
+This ontology was created as part of the submission for the module Semantic Data Technologies for the partial fulfilment of the course MSc Artificial Intelligence and Big Data at Anglia Ruskin University.</dc:description>
+        <dc:issued xml:lang="en">December 2019</dc:issued>
+        <dc:publisher xml:lang="en">SID: 0925739</dc:publisher>
+        <dc:title xml:lang="en">restBook</dc:title>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">restBook</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.restbook.com/containsAllergen -->
+
+    <owl:ObjectProperty rdf:about="http://www.restbook.com/containsAllergen">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <rdfs:range rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.restbook.com/hasDietaryRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.restbook.com/hasDietaryRequirement">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Booking"/>
+        <rdfs:range rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.restbook.com/hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.restbook.com/hasIngredient">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <rdfs:range rdf:resource="http://www.restbook.com/Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.restbook.com/hasShift -->
+
+    <owl:ObjectProperty rdf:about="http://www.restbook.com/hasShift">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Employee"/>
+        <rdfs:range rdf:resource="http://www.restbook.com/Weekday"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.restbook.com/isAllergicTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.restbook.com/isAllergicTo">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Booking"/>
+        <rdfs:range rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.restbook.com/satisfiesDietaryRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.restbook.com/satisfiesDietaryRequirement">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <rdfs:range rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.restbook.com/worksIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.restbook.com/worksIn">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Employee"/>
+        <rdfs:range rdf:resource="http://www.restbook.com/Work_Area"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.restbook.com/hasItemName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/hasItemName">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/hasName">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/has_email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/has_email">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/has_employeeID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/has_employeeID">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/has_employeeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/has_employeeName">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/has_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/has_id">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/has_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/has_name">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Booking"/>
+        <rdfs:domain rdf:resource="http://www.restbook.com/Weekday"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/has_phone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/has_phone">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/has_seats -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/has_seats">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/has_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/has_time">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Booking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.restbook.com/isSpicy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.restbook.com/isSpicy">
+        <rdfs:domain rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>High</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Low</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Medium</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.restbook.com/Allergen -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Allergen">
+        <dc:description xml:lang="en">Allergens are food ingredients that induce allergies when ingested by person allergic to those ingredients.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Booking -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Booking">
+        <dc:description xml:lang="en">A class of bookings or reservations made by the customers who wish to dine at the restaurant.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Caesar_Salad -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Caesar_Salad">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Starter_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Caprese -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Caprese">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Starter_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Carbonara -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Carbonara">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Pasta_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Dairy_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Dairy_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">Ingredients that originate from Milk.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Dessert_Menu_Item -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Dessert_Menu_Item">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desserts</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Dietary_Requirement -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Dietary_Requirement">
+        <dc:description xml:lang="en">A class of dietary requirement that is set by the customer who makes bookings.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Employee -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Employee">
+        <dc:description xml:lang="en">Staff members of the restaurant.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Fagioli_Salad -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Fagioli_Salad">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Salad_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Fish_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Fish_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">All kinds of fish used in a restaurant. Some exmaples include cod, haddock, salmon, tuna, anchovies.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Gnocchi -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Gnocchi">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Pasta_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Grain_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Grain_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">All types of grains like rice, wheat, barley, rye and quinoa.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Herb_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Herb_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">Plants used in food specifically for the purposes of adding taste or flavour.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Ingredient">
+        <dc:description xml:lang="en">Items that consitute each food item listed in the Menu.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Kitchen_Employee -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Kitchen_Employee">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Employee"/>
+        <dc:description xml:lang="en">Staff members who work in the restaurant kitchen for food preparation, cooking, plating and washing.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Main_Menu_Item -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Main_Menu_Item">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mains</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Meat_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Meat_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">All kinds of meat used in a restaruant like chicken, beef, pork, lamb etc.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Menu_Item -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Menu_Item">
+        <dc:description xml:lang="en">All items that are listed in the restaurant&apos;s menu and are available for the customers to order.</dc:description>
+        <dc:title xml:lang="en">Menu Item</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Nut_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Nut_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">All kinds of nuts.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Oil_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Oil_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">Various oils used for either cooking or dressing.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Other_Salad -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Other_Salad">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Salad_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Panettone -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Panettone">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Dessert_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Parmigiana -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Parmigiana">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Side_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Pasta_Menu_Item -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Pasta_Menu_Item">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Main_Menu_Item"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pasta</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Pizza_Menu_Item -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Pizza_Menu_Item">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Main_Menu_Item"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizza</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Risotto -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Risotto">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Side_Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Salad_Menu_Item -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Salad_Menu_Item">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salad</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Sauce_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Sauce_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">Sauces made from in-house ingredients or purchased from the supplier that are used as flavour or dressing in food.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Seasoning_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Seasoning_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">Ingredients usually in a powdered form added in food items for taste.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Side_Menu_Item -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Side_Menu_Item">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Menu_Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Starter_Menu_Item -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Starter_Menu_Item">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Menu_Item"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Starters</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Vegetable_Ingredient -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Vegetable_Ingredient">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Ingredient"/>
+        <dc:description xml:lang="en">All kinds of vegetables used at a restaurant. Examples include onion, tomato, potato, auburgine etc.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Waiting_Employee -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Waiting_Employee">
+        <rdfs:subClassOf rdf:resource="http://www.restbook.com/Employee"/>
+        <dc:description xml:lang="en">Staff members who work in the restaruant dining area serving customers and attending to their needs while dining.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Weekday -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Weekday">
+        <dc:description xml:lang="en">Days of the week.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.restbook.com/Work_Area -->
+
+    <owl:Class rdf:about="http://www.restbook.com/Work_Area">
+        <dc:description xml:lang="en">Area of Work in the restaurant. Usually Kitchen or Waiting.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.restbook.com/Almond -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Almond">
+        <rdf:type rdf:resource="http://www.restbook.com/Nut_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Almond</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Auburgine_Parmigiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Auburgine_Parmigiana">
+        <rdf:type rdf:resource="http://www.restbook.com/Parmigiana"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/eggplant"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/garlic"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mozzarellaCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/onion"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/oregano"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aubergine Parmigiana</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Avocado_and_Feta_Salad -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Avocado_and_Feta_Salad">
+        <rdf:type rdf:resource="http://www.restbook.com/Other_Salad"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/avocado"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/fettacheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/lemon"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/lettuce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avocado and Fetta</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Booking1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Booking1">
+        <rdf:type rdf:resource="http://www.restbook.com/Booking"/>
+        <hasDietaryRequirement rdf:resource="http://www.restbook.com/dairy-free"/>
+        <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">libby.miller@bristol.ac.uk</has_email>
+        <has_id rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">18425</has_id>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Libby Miller</has_name>
+        <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">01223645456</has_phone>
+        <has_seats rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</has_seats>
+        <has_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-01T20:00:00</has_time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Booking2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Booking2">
+        <rdf:type rdf:resource="http://www.restbook.com/Booking"/>
+        <hasDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">me@aaronsw.com</has_email>
+        <has_id rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">12345</has_id>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aaron Swartz</has_name>
+        <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">222333444</has_phone>
+        <has_seats rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</has_seats>
+        <has_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-12T18:00:00</has_time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Booking3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Booking3">
+        <rdf:type rdf:resource="http://www.restbook.com/Booking"/>
+        <hasDietaryRequirement rdf:resource="http://www.restbook.com/gluten-free"/>
+        <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">barbara.johnson@gmail.com</has_email>
+        <has_id rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13221</has_id>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barbara Johnson</has_name>
+        <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0745221563</has_phone>
+        <has_seats rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</has_seats>
+        <has_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-21T18:00:00</has_time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Booking4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Booking4">
+        <rdf:type rdf:resource="http://www.restbook.com/Booking"/>
+        <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c.herschel@msn.com</has_email>
+        <has_id rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11378</has_id>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caroline Herschel</has_name>
+        <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">07578645378</has_phone>
+        <has_seats rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</has_seats>
+        <has_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-24T21:00:00</has_time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Booking5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Booking5">
+        <rdf:type rdf:resource="http://www.restbook.com/Booking"/>
+        <hasDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robert.mitchel@gmail.com</has_email>
+        <has_id rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28584</has_id>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert Mitchel</has_name>
+        <has_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0785423567</has_phone>
+        <has_seats rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</has_seats>
+        <has_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-23T19:00:00</has_time>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Caprese_Verdura -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Caprese_Verdura">
+        <rdf:type rdf:resource="http://www.restbook.com/Caprese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/basil"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/extraVirginOliveOil"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mozzarellaCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/pestoSauce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/gluten-free"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caprese Verdura</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Capricciosa -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Capricciosa">
+        <rdf:type rdf:resource="http://www.restbook.com/Pizza_Menu_Item"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/anchovies"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/caper"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mozzarellaCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/olive"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/pancetta"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomatoSauce"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capricciosa</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Caprina -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Caprina">
+        <rdf:type rdf:resource="http://www.restbook.com/Pizza_Menu_Item"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/goatsCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mozzarellaCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/sundriedTomato"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomatoSauce"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caprina</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Carbonara_Pancetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Carbonara_Pancetta">
+        <rdf:type rdf:resource="http://www.restbook.com/Carbonara"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/carbonaraSauce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/pancetta"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbonara Pancetta</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Carbonara_Salmone -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Carbonara_Salmone">
+        <rdf:type rdf:resource="http://www.restbook.com/Carbonara"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/carbonaraSauce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parsley"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/salmon"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/pescatarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbonara Saalmone</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Carbonara_Spinaci -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Carbonara_Spinaci">
+        <rdf:type rdf:resource="http://www.restbook.com/Carbonara"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/carbonaraSauce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/spinach"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbonara Spinaci</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Chicken_Parmigiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Chicken_Parmigiana">
+        <rdf:type rdf:resource="http://www.restbook.com/Parmigiana"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/chicken"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/garlic"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/onion"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/oregano"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Parmigiana</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/David_Millard -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/David_Millard">
+        <rdf:type rdf:resource="http://www.restbook.com/Kitchen_Employee"/>
+        <hasShift rdf:resource="http://www.restbook.com/Monday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Tuesday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Wednesday"/>
+        <worksIn rdf:resource="http://www.restbook.com/Kitchen"/>
+        <has_employeeID rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</has_employeeID>
+        <has_employeeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Millard</has_employeeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Eggplant_Caponata -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Eggplant_Caponata">
+        <rdf:type rdf:resource="http://www.restbook.com/Other_Salad"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/caper"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/celery"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/eggplant"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/onion"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/oregano"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eggplant Caponata</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Florentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Florentina">
+        <rdf:type rdf:resource="http://www.restbook.com/Pizza_Menu_Item"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/garlic"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mozzarellaCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/olive"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/spinach"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomatoSauce"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Fransesco_Audielo -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Fransesco_Audielo">
+        <rdf:type rdf:resource="http://www.restbook.com/Waiting_Employee"/>
+        <hasShift rdf:resource="http://www.restbook.com/Friday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Monday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Saturday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Sunday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Tuesday"/>
+        <worksIn rdf:resource="http://www.restbook.com/Waiting"/>
+        <has_employeeID rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</has_employeeID>
+        <has_employeeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fransesco Audielo</has_employeeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Friday -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Friday">
+        <rdf:type rdf:resource="http://www.restbook.com/Weekday"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friday</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/FruttiDiMare -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/FruttiDiMare">
+        <rdf:type rdf:resource="http://www.restbook.com/Pizza_Menu_Item"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/garlic"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frutti di Mare</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Giardiniera -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Giardiniera">
+        <rdf:type rdf:resource="http://www.restbook.com/Pizza_Menu_Item"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/leek"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mozzarellaCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mushroom"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/olive"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/peppadewPepper"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/petitPois"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giardiniera</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Gnocchi_alla_Romana -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Gnocchi_alla_Romana">
+        <rdf:type rdf:resource="http://www.restbook.com/Gnocchi"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/butter"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/egg"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/potato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gnocchi alla Romana</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Grand_Chicken_Caesar -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Grand_Chicken_Caesar">
+        <rdf:type rdf:resource="http://www.restbook.com/Caesar_Salad"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/anchovies"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/caesarDressingSauce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/chicken"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/granaPadanoCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/lettuce"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/gluten-free"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grand Chicken Caesar</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Grand_Salmon_Caesar -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Grand_Salmon_Caesar">
+        <hasIngredient rdf:resource="http://www.restbook.com/lettuce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/olive"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/salmon"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/pescatarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grand Salmon Caesar</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/James_Porter -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/James_Porter">
+        <rdf:type rdf:resource="http://www.restbook.com/Kitchen_Employee"/>
+        <hasShift rdf:resource="http://www.restbook.com/Friday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Saturday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Thursday"/>
+        <worksIn rdf:resource="http://www.restbook.com/Kitchen"/>
+        <has_employeeID rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</has_employeeID>
+        <has_employeeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Porter</has_employeeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Kitchen">
+        <rdf:type rdf:resource="http://www.restbook.com/Work_Area"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kitchen</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Monday -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Monday">
+        <rdf:type rdf:resource="http://www.restbook.com/Weekday"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Napolenata -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Napolenata">
+        <rdf:type rdf:resource="http://www.restbook.com/Pizza_Menu_Item"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/anchovies"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/caper"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mozzarellaCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/olive"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/pescatarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Napolenata</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Panettone_with_custard -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Panettone_with_custard">
+        <rdf:type rdf:resource="http://www.restbook.com/Panettone"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/custard"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/wheat_flour"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Custard Panettone</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Paul_Carter -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Paul_Carter">
+        <rdf:type rdf:resource="http://www.restbook.com/Waiting_Employee"/>
+        <hasShift rdf:resource="http://www.restbook.com/Friday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Saturday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Thursday"/>
+        <hasShift rdf:resource="http://www.restbook.com/Wednesday"/>
+        <worksIn rdf:resource="http://www.restbook.com/Waiting"/>
+        <has_employeeID rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</has_employeeID>
+        <has_employeeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Carter</has_employeeName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Pollo_Pancetta_Salad -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Pollo_Pancetta_Salad">
+        <rdf:type rdf:resource="http://www.restbook.com/Other_Salad"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/chicken"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/lemon"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/lettuce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/pancetta"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/thyme"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pollo Pancetta Salad</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Quinoa_Salad -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Quinoa_Salad">
+        <rdf:type rdf:resource="http://www.restbook.com/Other_Salad"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/avocado"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/lettuce"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/quinoa"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tomato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quinoa Salad</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Saturday -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Saturday">
+        <rdf:type rdf:resource="http://www.restbook.com/Weekday"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saturday</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Sunday -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Sunday">
+        <rdf:type rdf:resource="http://www.restbook.com/Weekday"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunday</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Thursday -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Thursday">
+        <rdf:type rdf:resource="http://www.restbook.com/Weekday"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thursday</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Tonno_e_Fagioli -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Tonno_e_Fagioli">
+        <rdf:type rdf:resource="http://www.restbook.com/Fagioli_Salad"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/cannelliniBean"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/lemon"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/onion"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parsley"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/peppadewPepper"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/tuna"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/pescatarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tonno e Fagioli</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Truffle -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Truffle">
+        <rdf:type rdf:resource="http://www.restbook.com/Nut_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Truffle</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Truffle_Gnocchi -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Truffle_Gnocchi">
+        <rdf:type rdf:resource="http://www.restbook.com/Gnocchi"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/Truffle"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/butter"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/egg"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/potato"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Truffle Gnocchi</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Tuesday -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Tuesday">
+        <rdf:type rdf:resource="http://www.restbook.com/Weekday"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tuesday</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Waiting -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Waiting">
+        <rdf:type rdf:resource="http://www.restbook.com/Work_Area"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/Wednesday -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/Wednesday">
+        <rdf:type rdf:resource="http://www.restbook.com/Weekday"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wednesday</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/anchovies -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/anchovies">
+        <rdf:type rdf:resource="http://www.restbook.com/Fish_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchovies</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/avocado -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/avocado">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avocado</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/basil -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/basil">
+        <rdf:type rdf:resource="http://www.restbook.com/Herb_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basil</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/bechamelSauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/bechamelSauce">
+        <rdf:type rdf:resource="http://www.restbook.com/Sauce_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bechamel Sauce</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/beef -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/beef">
+        <rdf:type rdf:resource="http://www.restbook.com/Meat_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beef</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/bologneseSauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/bologneseSauce">
+        <rdf:type rdf:resource="http://www.restbook.com/Sauce_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolognese Sauce</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/butter -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/butter">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Butter</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/caesarDressingSauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/caesarDressingSauce">
+        <rdf:type rdf:resource="http://www.restbook.com/Sauce_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caesar Dressing Sauce</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/cajunSpice -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/cajunSpice">
+        <rdf:type rdf:resource="http://www.restbook.com/Seasoning_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cajun Spice</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/cannelliniBean -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/cannelliniBean">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cannellini Beans</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/caper -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/caper">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caper</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/carbonaraSauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/carbonaraSauce">
+        <rdf:type rdf:resource="http://www.restbook.com/Sauce_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbonara Sauce</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/celery -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/celery">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celery</has_name>
+        <rdfs:label xml:lang="en">celery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/chicken -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/chicken">
+        <rdf:type rdf:resource="http://www.restbook.com/Meat_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/crustacean -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/crustacean">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/custard -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/custard">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Custard</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/dairy-free -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/dairy-free">
+        <rdf:type rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dairy-free</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/doubleCream -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/doubleCream">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/egg -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/egg">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egg</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/eggplant -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/eggplant">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eggplant</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/extraVirginOliveOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/extraVirginOliveOil">
+        <rdf:type rdf:resource="http://www.restbook.com/Oil_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extra Virgin Olive Oil</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/fettacheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/fettacheese">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feta Cheese</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/fish -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/fish">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/garlic -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/garlic">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garlic</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/garlicOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/garlicOil">
+        <rdf:type rdf:resource="http://www.restbook.com/Oil_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garlic Oil</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/gluten-free -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/gluten-free">
+        <rdf:type rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gluten-free</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/goatsCheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/goatsCheese">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goat&apos;s Cheese</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/granaPadanoCheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/granaPadanoCheese">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grana Padano</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/greenPepper -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/greenPepper">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green Pepper</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/grilledPepper -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/grilledPepper">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grilled Pepper</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/houseDressingSauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/houseDressingSauce">
+        <rdf:type rdf:resource="http://www.restbook.com/Sauce_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">House Dressing Sauce</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/leek -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/leek">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leek</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/lemmonJuice -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/lemmonJuice">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/lemon -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/lemon">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lemon</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/lettuce -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/lettuce">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lettuce</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/lupin -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/lupin">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/milk -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/milk">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/mint -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/mint">
+        <rdf:type rdf:resource="http://www.restbook.com/Herb_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mint</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/mollusc -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/mollusc">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/mozzarellaCheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/mozzarellaCheese">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mozzarella</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/mushroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/mushroom">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mushroom</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/mushroom_and_truffle_risotto -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/mushroom_and_truffle_risotto">
+        <rdf:type rdf:resource="http://www.restbook.com/Risotto"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mushroom"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parsley"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/truffleOil"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/vegetarian"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mushroom and Truffle Risotto</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Low</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/mustard -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/mustard">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/non-spicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/non-spicy">
+        <rdf:type rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Non-spicy</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/olive -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/olive">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olive</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/oliveOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/oliveOil">
+        <rdf:type rdf:resource="http://www.restbook.com/Oil_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olive Oil</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/onion -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/onion">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onion</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/oregano -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/oregano">
+        <rdf:type rdf:resource="http://www.restbook.com/Herb_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oregano</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/pancetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/pancetta">
+        <rdf:type rdf:resource="http://www.restbook.com/Meat_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pancetta</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/pancetta_and_truffle_risotto -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/pancetta_and_truffle_risotto">
+        <rdf:type rdf:resource="http://www.restbook.com/Risotto"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mushroom"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/pancetta"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parmesanCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parsley"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pancetta and Truffle Risotto</has_name>
+        <isSpicy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium</isSpicy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/parmesanCheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/parmesanCheese">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/mozzarellaCheese"/>
+        <hasIngredient rdf:resource="http://www.restbook.com/parsley"/>
+        <satisfiesDietaryRequirement rdf:resource="http://www.restbook.com/non-spicy"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parmesan</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/parsley -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/parsley">
+        <rdf:type rdf:resource="http://www.restbook.com/Herb_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parsley</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/peanut -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/peanut">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/peppadewPepper -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/peppadewPepper">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peppadew Pepper</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/pepperoni -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/pepperoni">
+        <rdf:type rdf:resource="http://www.restbook.com/Meat_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pepperoni</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/pescatarian -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/pescatarian">
+        <rdf:type rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pescatarian</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/pestoSauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/pestoSauce">
+        <rdf:type rdf:resource="http://www.restbook.com/Sauce_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pesto Sauce</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/petitPois -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/petitPois">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petit Pois</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/pineKernels -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/pineKernels">
+        <rdf:type rdf:resource="http://www.restbook.com/Nut_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pine Kernels</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/potato -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/potato">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Potato</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/quinoa -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/quinoa">
+        <rdf:type rdf:resource="http://www.restbook.com/Grain_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quinoa</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/rice -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/rice">
+        <rdf:type rdf:resource="http://www.restbook.com/Grain_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rice</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/ricottaCheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/ricottaCheese">
+        <rdf:type rdf:resource="http://www.restbook.com/Dairy_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ricotta Cheese</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/risotto_rice -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/risotto_rice"/>
+    
+
+
+    <!-- http://www.restbook.com/rocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/rocket">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rocket Leaves</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/salmon -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/salmon">
+        <rdf:type rdf:resource="http://www.restbook.com/Fish_Ingredient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/santosTomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/santosTomato">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santos Tomatoes</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/sesameSeed -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/sesameSeed">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/soybean -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/soybean">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/spinach -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/spinach">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spinach</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/sulphurDioxide -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/sulphurDioxide">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/sundriedTomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/sundriedTomato">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sundried Tomatoes</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/sweetBabyOnion -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/sweetBabyOnion">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweet Baby Onions</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/thyme -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/thyme">
+        <rdf:type rdf:resource="http://www.restbook.com/Herb_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thyme</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/tomato">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomato</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/tomatoSauce -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/tomatoSauce">
+        <rdf:type rdf:resource="http://www.restbook.com/Sauce_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomato Sauce</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/treenut -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/treenut">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/truffleOil -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/truffleOil">
+        <rdf:type rdf:resource="http://www.restbook.com/Oil_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">truffle Oil</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/tuna -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/tuna">
+        <rdf:type rdf:resource="http://www.restbook.com/Fish_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tuna</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/vegan -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/vegan">
+        <rdf:type rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vegan</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/vegetarian -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/vegetarian">
+        <rdf:type rdf:resource="http://www.restbook.com/Dietary_Requirement"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vegetarian</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/vineTomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/vineTomato">
+        <rdf:type rdf:resource="http://www.restbook.com/Vegetable_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vine Tomatoes</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/vinegar -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/vinegar">
+        <rdf:type rdf:resource="http://www.restbook.com/Sauce_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vinegar</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/wheat -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/wheat">
+        <rdf:type rdf:resource="http://www.restbook.com/Allergen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.restbook.com/wheat_flour -->
+
+    <owl:NamedIndividual rdf:about="http://www.restbook.com/wheat_flour">
+        <rdf:type rdf:resource="http://www.restbook.com/Grain_Ingredient"/>
+        <has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wheat Flour</has_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <dc:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <dc:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</dc:title>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dc:modified>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <dc:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</dc:description>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <dc:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</dc:description>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <dc:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</dc:description>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <dc:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</dc:description>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <dc:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <dc:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</dc:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <dc:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <dc:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</dc:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <dc:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</dc:description>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <dc:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </dc:description>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <dc:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</dc:description>
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <dc:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</dc:description>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <dc:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</dc:description>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dc:modified>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <dc:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <dc:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</dc:description>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</dc:issued>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dc:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
