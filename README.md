@@ -1,37 +1,18 @@
 # restBook
 
-A semantic web application that can search bookings, menu items and employees within a restaurant domain and display results.<br>
+A semantic Python web application that can search bookings, menu items and employees within a restaurant domain and display results.<br>
 The data are stored in an RDF/XML format and SPARQLE queries are used to return the search results.<br>
 The data was entered individually by hand. Front end was designed using HTML, CSS and Bootstrap.<br>
 Carousel images are royalty free and the logo was designed by the author.
 
 ## View Live Demo
 
-The application is deployed in heroku which can be visited using the link below.
+The application is deployed in heroku which can be visited using the link below.<br>
 [restBook-HerokuDeployment](https://restbook-aru.herokuapp.com/)
 
 ### Prerequisites
 
 All the dependencies of the application are listed in requirements.txt.
-
-
-### Installing on a local web server
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
