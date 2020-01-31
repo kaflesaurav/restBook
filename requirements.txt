@@ -1,4 +1,4 @@
-Django==2.2.7
+Django
 gunicorn==20.0.4
 isodate==0.6.0
 pyparsing==2.4.5
